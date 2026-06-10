@@ -1,0 +1,285 @@
+:root {
+	--grey: #adadad;
+	--black: #1b1b1b;
+	--white: #ffffff;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--white);
+	position: relative;
+}
+
+#navbar-container {
+	width: 100%;
+	height: 6vh;
+	background-color: var(--black);
+	display: flex;
+	position: relative;
+	position: sticky;
+	top: 0;
+	z-index: 6;
+}
+
+.logo-wrapper {
+	width: 10%;
+	height: 100%;
+}
+
+.logo {
+	width: 100%;
+	height: 100%;
+	background-image: url(assets/logo.png);
+	object-fit: contain;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0% 40%;
+	position: relative;
+	clip-path: polygon(70% 0, 100% 100%, 0 100%, 0 0);
+}
+
+.right-side-wrapper {
+	display: flex;
+	justify-content: flex-end;
+	width: 60%;
+	height: 100%;
+	/* background-color: red; */
+	margin-left: auto;
+}
+
+.shark-gills-style {
+	width: 30%;
+	height: 100%;
+	margin-right: -4%;
+	z-index: 1;
+}
+
+.shark-gills-style img {
+	width: 100%;
+	height: 100%;
+}
+
+.nav-container {
+	width: 80%;
+	height: 100%;
+	/* margin-left: auto; */
+	z-index: 4;
+	background-color: var(--white);
+	position: relative;
+	clip-path: polygon(100% 0, 100% 100%, 0 100%, 5% 0);
+	display: flex;
+	justify-content: center;
+}
+
+.nav-links {
+	width: 40%;
+	height: 100%;
+	display: flex;
+	list-style: none;
+	/* background-color: red; */
+	color: var(--grey);
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+}
+
+.nav-links li {
+	width: 20%;
+	display: flex;
+	align-items: center;
+	padding: 0px 10%;
+	justify-content: center;
+	background-color: var(--white);
+	border-left: 2px solid var(--grey);
+	font-size: 0.7rem;
+	font-weight: bold;
+	clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+	animation: sizingDown 1s ease-in-out;
+}
+
+.nav-links li a {
+	text-decoration: none;
+	color: var(--grey);
+}
+
+.nav-links li:hover {
+	width: 40%;
+	background-color: var(--black);
+	clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+	animation: sizingUp 1s ease-in-out;
+}
+
+@keyframes sizingUp {
+	0% {
+		width: 0%;
+		opacity: 70%;
+	}
+	25% {
+		width: 25%;
+		opacity: 100%;
+	}
+	50% {
+		width: 50%;
+		opacity: 100%;
+	}
+	75% {
+		width: 75%;
+		opacity: 100%;
+	}
+	100% {
+		width: 100%;
+		opacity: 100%;
+	}
+}
+
+@keyframes sizingDown {
+	0% {
+		width: 100%;
+		background-color: var(--black);
+	}
+	25% {
+		width: 75%;
+		background-color: var(--grey);
+	}
+	50% {
+		width: 50%;
+		background-color: var(--white);
+	}
+	75% {
+		width: 25%;
+	}
+	100% {
+		width: 0%;
+	}
+}
+
+#top-frame-style {
+	width: 10%;
+	position: absolute;
+	top: -28%;
+	right: 0;
+	z-index: 5;
+}
+
+.hero-container {
+	width: 100%;
+	height: 94vh;
+	display: flex;
+	flex-direction: row;
+	background-image: url(assets/cyberpunk-bg.png);
+	object-fit: contain;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0% 10%;
+}
+
+.left-side-hero-container {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 5%;
+}
+
+.hero-text-headline {
+	font-family: "Black Ops One", system-ui;
+	font-weight: 400;
+	font-size: 2.5rem;
+}
+
+.hero-subheadline {
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+	width: 50%;
+	line-height: 2rem;
+	letter-spacing: 0.3rem;
+}
+
+.left-side-hero-container a {
+	width: 20%;
+	height: 3rem;
+	color: var(--white);
+	text-decoration: none;
+	font-family: "Black Ops One", system-ui;
+	font-weight: 400;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.4rem;
+	background-color: var(--black);
+}
+
+.right-side-hero-container {
+	width: 50%;
+	height: 100%;
+	background-image: url(assets/hero-bike-mask-img.jpg);
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	background-position: 80% 0%;
+	background-attachment: fixed;
+	position: relative;
+}
+
+/* .hero-bike-img {
+	width: auto;
+	height: 100%;
+	position: relative;
+} */
+
+.hero-mask-style {
+	position: absolute;
+	left: 0;
+	width: 80%;
+	height: 100%;
+	background: transparent;
+}
+
+.brands-carousel-container {
+	width: auto;
+	height: 10vh;
+	/* background-color: red; */
+	overflow: hidden;
+    mask-image: linear-gradient(to right,transparent, #000 20%, #000 80%, transparent);
+}
+
+@keyframes scroll{
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.brand-logo-wrapper {
+	width: auto;
+	height: 100%;
+	display: inline-flex;
+	justify-content: flex-start;
+	align-items: center;
+    animation: scroll 25s linear infinite;
+}
+
+.brand-logo {
+	width: auto;
+	min-width: 12rem;
+    
+	/* background-color: black; */
+	height: 100%;
+}
+
+.brand-logo img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.features-container{
+	width: 100%;
+	height: 100vh;
+}
