@@ -363,7 +363,7 @@ body {
 	height: 30%;
 	font-family: "Montserrat", sans-serif;
 	font-weight: bold;
-	line-height: 2rem;
+	line-height: 200%;
 }
 
 .bike-cards {
@@ -660,6 +660,7 @@ footer {
 	}
 
 	.features-container{
+		padding: 0;
 		height: auto;
 	}
 
@@ -669,19 +670,41 @@ footer {
 
 	.feature-card-container{
 		flex-direction: column;
+		gap: 1rem;
+		padding: 2rem 2rem; 
 	}
 
 	.feature-video-container,.feature-text-container{
 		width: 100%;
-		height: auto;
 	}
 
 	.feature-text-container{
-		background-size: auto 100%;
-		background-position: 0% 0%;
-		padding-left: 0%;
+		gap: 1rem;
 	}
 
+
+	.cards-container{
+		flex-direction: column;
+	}
+
+	footer{
+		background-size: auto 100%;
+		height: auto;
+	}
+
+	.footer-container{
+		flex-direction: column;
+	}
+
+	.left-side-footer-container, .left-side-footer-container img{
+		width: 100%;
+		height: auto;
+		flex-direction: column;
+	}
+
+	.center-side-footer-container{
+		width: 100%;
+	}
 }
 
 
@@ -689,5 +712,9 @@ footer {
 	.right-side-hero-container{
 		background-position: 0% 100%;
 		background-size: 100% auto;
+	}
+
+	.feature-text-container p{
+		font-size: 0.8rem;
 	}
 }
