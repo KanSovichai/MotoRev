@@ -13,6 +13,7 @@
 body {
 	background-color: var(--white);
 	position: relative;
+	overflow-x: hidden;
 }
 
 #navbar-container {
@@ -380,6 +381,7 @@ body {
 	align-items: center;
 	gap: 10%;
 	overflow-x: scroll;
+	overflow-y: hidden;
 	justify-content: center;
 }
 
@@ -693,6 +695,7 @@ footer {
 
 	footer{
 		background-size: auto 100%;
+		background-position: 20% 0%;
 		height: auto;
 	}
 
