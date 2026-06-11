@@ -12,6 +12,7 @@
 
 body {
 	background-color: var(--white);
+	overflow-x: hidden;
 	position: relative;
 }
 
@@ -23,7 +24,7 @@ body {
 	position: relative;
 	position: sticky;
 	top: 0;
-	z-index: 6;
+	z-index: 100;
 }
 
 .logo-wrapper {
@@ -74,6 +75,7 @@ body {
 	clip-path: polygon(100% 0, 100% 100%, 0 100%, 5% 0);
 	display: flex;
 	justify-content: center;
+	align-items: center;
 }
 
 .nav-links {
@@ -184,7 +186,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	/* padding-left: 10rem; */
+	padding-left: 2rem;
 	gap: 5%;
 }
 
@@ -204,7 +206,7 @@ body {
 }
 
 .left-side-hero-container a {
-	width: 20%;
+	width: 10rem;
 	height: 3rem;
 	color: var(--white);
 	text-decoration: none;
@@ -226,20 +228,22 @@ body {
 	background-position: 80% 0%;
 	background-attachment: fixed;
 	position: relative;
+	
 }
 
-/* .hero-bike-img {
-	width: auto;
-	height: 100%;
-	position: relative;
-} */
 
 .hero-mask-style {
 	position: absolute;
 	left: 0;
-	width: 80%;
+	width: 100%;
+	background-image: url(assets/mask-style.png);
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-size: 87% auto;
+	background-position: 0% 0%;
 	height: 100%;
-	background: transparent;
+	z-index: 10;
+	/* background: transparent; */
 }
 
 .brands-carousel-container {
@@ -247,13 +251,19 @@ body {
 	height: 10vh;
 	/* background-color: red; */
 	overflow: hidden;
-    mask-image: linear-gradient(to right,transparent, #000 20%, #000 80%, transparent);
+	mask-image: linear-gradient(
+		to right,
+		transparent,
+		#000 20%,
+		#000 80%,
+		transparent
+	);
 }
 
-@keyframes scroll{
-    to {
-        transform: translateX(-50%);
-    }
+@keyframes scroll {
+	to {
+		transform: translateX(-50%);
+	}
 }
 
 .brand-logo-wrapper {
@@ -262,13 +272,13 @@ body {
 	display: inline-flex;
 	justify-content: flex-start;
 	align-items: center;
-    animation: scroll 25s linear infinite;
+	animation: scroll 25s linear infinite;
 }
 
 .brand-logo {
 	width: auto;
 	min-width: 12rem;
-    
+
 	/* background-color: black; */
 	height: 100%;
 }
@@ -281,14 +291,14 @@ body {
 	background-size: cover;
 }
 
-.features-container{
+.features-container {
 	width: 100%;
 	height: 90vh;
 	background-color: var(--black);
 	padding-left: 3rem;
 }
 
-.feature-headline{
+.feature-headline {
 	width: 100%;
 	height: 10%;
 	display: flex;
@@ -299,9 +309,7 @@ body {
 	color: white;
 }
 
-
-
-.feature-card-container{
+.feature-card-container {
 	width: auto;
 	height: 90%;
 	background: var(--white);
@@ -318,18 +326,18 @@ body {
 	background-position: 100% 0%;
 }
 
-.feature-video-container{
+.feature-video-container {
 	width: 20%;
 	height: 100%;
 }
 
-.feature-video-container video{
+.feature-video-container video {
 	width: 100%;
 	height: 100%;
 	clip-path: polygon(25% 0%, 100% 0, 100% 75%, 75% 100%, 0 100%, 0 25%);
 }
 
-.feature-text-container{
+.feature-text-container {
 	width: 50%;
 	height: 70%;
 	/* background-color: red; */
@@ -343,14 +351,14 @@ body {
 	gap: 5rem;
 }
 
-.feature-text-container h2{
+.feature-text-container h2 {
 	font-family: "Black Ops One", system-ui;
 	font-weight: 400;
 	font-size: 3rem;
 	border-bottom: 2px solid var(--black);
 }
 
-.feature-text-container p{
+.feature-text-container p {
 	width: 80%;
 	height: 30%;
 	font-family: "Montserrat", sans-serif;
@@ -358,15 +366,14 @@ body {
 	line-height: 2rem;
 }
 
-
-.bike-cards{
+.bike-cards {
 	width: 100%;
 	height: auto;
 	background-color: var(--white);
 	padding: 3rem 0;
 }
 
-.cards-container{
+.cards-container {
 	width: 100%;
 	height: auto;
 	display: flex;
@@ -375,24 +382,22 @@ body {
 	gap: 10rem;
 }
 
-.card{
+.card {
 	width: 20rem;
 	height: 25rem;
 	border: 3px solid var(--black);
 	background-color: var(--black);
 	clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%, 0 25%);
 	border-radius: 0.5rem;
-
 }
 
-
-.card img{
+.card img {
 	width: 100%;
 	height: 50%;
 	object-fit: cover;
 }
 
-.card-text-container{
+.card-text-container {
 	width: 100%;
 	height: 50%;
 	display: flex;
@@ -402,14 +407,14 @@ body {
 	gap: 1rem;
 }
 
-.card-text-container h1{
+.card-text-container h1 {
 	font-family: "Black Ops One", system-ui;
 	font-weight: 400;
-	font-size:1rem;
+	font-size: 1rem;
 	color: white;
 }
 
-.card-text-container a{
+.card-text-container a {
 	width: 90%;
 	height: 20%;
 	background-color: transparent;
@@ -423,7 +428,7 @@ body {
 	border-radius: 0.2rem;
 }
 
-.view-more{
+.view-more {
 	width: 100%;
 	height: 20vh;
 	display: flex;
@@ -435,7 +440,7 @@ body {
 	background-position: 50% 100%;
 }
 
-.view-more a{
+.view-more a {
 	text-decoration: none;
 	font-family: "Black Ops One", system-ui;
 	text-decoration: underline;
@@ -447,9 +452,10 @@ body {
 footer {
 	width: 100%;
 	height: 60vh;
-	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-					url(assets/footer-bg.jpg);
-	
+	background-image:
+		linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url(assets/footer-bg.jpg);
+
 	background-repeat: no-repeat;
 	background-size: cover;
 	object-fit: contain;
@@ -460,7 +466,7 @@ footer {
 	align-items: center;
 }
 
-.footer-container{
+.footer-container {
 	width: 90%;
 	height: 100%;
 	display: flex;
@@ -468,8 +474,7 @@ footer {
 	border-top: 3px solid var(--white);
 }
 
-
-.left-side-footer-container{
+.left-side-footer-container {
 	width: 50%;
 	height: 100%;
 	display: flex;
@@ -479,13 +484,13 @@ footer {
 	padding: 2rem 0px 0px 2rem;
 }
 
-.left-side-footer-container img{
+.left-side-footer-container img {
 	width: auto;
 	height: 30%;
 	clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
 }
 
-.left-side-footer-container h1{
+.left-side-footer-container h1 {
 	width: 40%;
 	color: white;
 	font-family: "Black Ops One", system-ui;
@@ -493,7 +498,7 @@ footer {
 	font-size: 1.5rem;
 }
 
-.center-side-footer-container{
+.center-side-footer-container {
 	width: 25%;
 	height: 100%;
 	display: flex;
@@ -503,14 +508,14 @@ footer {
 	/* background-color: red; */
 }
 
-.center-side-footer-container h1{
+.center-side-footer-container h1 {
 	font-family: "Black Ops One", system-ui;
 	font-weight: 400;
 	font-size: 1.5rem;
 	color: var(--white);
 }
 
-.center-side-footer-container ul{
+.center-side-footer-container ul {
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -519,14 +524,14 @@ footer {
 	gap: 1rem;
 }
 
-.center-side-footer-container ul li{
+.center-side-footer-container ul li {
 	font-family: "Montserrat", sans-serif;
 	font-weight: bold;
 	color: var(--white);
 	text-decoration: none;
 }
 
-#socials-link{
+#socials-link {
 	display: flex;
 	flex-direction: row;
 	/* justify-content: center; */
@@ -534,7 +539,155 @@ footer {
 	gap: 1rem;
 }
 
-#github-svg ,#telegram-svg, #facebook-svg{
+#github-svg,
+#telegram-svg,
+#facebook-svg {
 	width: 2.5rem;
 	height: 2.5rem;
+}
+
+.toggle-input {
+	display: none;
+}
+
+.toggle-label {
+	display: none;
+	padding: 0.5rem;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+@media (max-width: 1054px) {
+
+    .nav-container {
+        clip-path: none;
+		/* display: none; */
+        width: 100%;
+        position: relative;
+		padding-right: 1rem;
+    }
+
+	@keyframes slideToLeft {
+		from{
+			transform: translateX(100%);
+		}
+		to{
+			transform: translateX(0);
+		}
+	}
+
+	@keyframes slideToRight {
+		from{
+			transform: translateX(0);
+		}
+		to{
+			transform: translateX(100%);
+		}
+	}
+
+    .nav-links {
+        display: flex;
+		visibility: hidden;
+		opacity: 0;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+		gap: 1.5rem;
+        left: 0;
+        width: 100%;
+		padding: 1rem;
+		height: 100vh;
+        background-color: var(--white);
+        z-index: 10;
+		transform: translateX(100%);
+		transition: transform 1s ease-in-out, opacity 1s ease-in-out, visibility 1s ease-in-out;
+    }
+
+    .nav-links li {
+        width: 100%;
+        clip-path: none;
+        border-left: none;
+		font-size: 0.7rem;
+        
+		animation: none;
+    }
+
+	.nav-links li:hover{
+		clip-path: none;
+		width: 100%;
+		background-color: transparent;
+		cursor: pointer;
+		border-bottom: 1px solid var(--grey);
+		animation: none;
+	}
+
+    .toggle-label {
+        display: flex;
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+    .toggle-input:checked + .toggle-label + .nav-links {
+        visibility: visible;
+		opacity: 1;
+		animation: slideToLeft 1s ease-in-out;
+		transform: translateX(0);
+    }
+
+	.hero-container{
+		flex-direction: column;
+	}
+
+	.hero-container,.left-side-hero-container,.right-side-hero-container{
+		width: 100%;
+	}
+
+	.hero-container h1{
+		font-size: 1.2rem;
+	}
+
+	.hero-container p{
+		font-size: 0.9rem;
+	}
+
+	.right-side-hero-container{
+		background-position: 0% 50%;
+		background-size: 100% auto;
+	}
+
+	.hero-mask-style{
+		background-size: 100% 100%;
+	}
+
+	.features-container{
+		height: auto;
+	}
+
+	.feature-headline{
+		font-size: 0.7rem;
+	}
+
+	.feature-card-container{
+		flex-direction: column;
+	}
+
+	.feature-video-container,.feature-text-container{
+		width: 100%;
+		height: auto;
+	}
+
+	.feature-text-container{
+		background-size: auto 100%;
+		background-position: 0% 0%;
+		padding-left: 0%;
+	}
+
+}
+
+
+@media (max-width: 690px) {
+	.right-side-hero-container{
+		background-position: 0% 100%;
+		background-size: 100% auto;
+	}
 }
