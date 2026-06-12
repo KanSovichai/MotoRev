@@ -1,0 +1,341 @@
+:root {
+	--grey: #adadad;
+	--black: #1b1b1b;
+	--white: #ffffff;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+#navbar-container {
+	width: 100%;
+	height: 6vh;
+	background-color: var(--black);
+	display: flex;
+	position: relative;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+
+.logo-wrapper {
+	width: 10%;
+	height: 100%;
+}
+
+.logo {
+	width: 100%;
+	height: 100%;
+	background-image: url(assets/logo.png);
+	object-fit: contain;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 40%;
+	position: relative;
+	clip-path: polygon(70% 0, 100% 100%, 0 100%, 0 0);
+}
+
+.right-side-wrapper {
+	display: flex;
+	justify-content: flex-end;
+	width: 60%;
+	height: 100%;
+	/* background-color: red; */
+	margin-left: auto;
+}
+
+.shark-gills-style {
+	width: 30%;
+	height: 100%;
+	margin-right: -4%;
+	z-index: 1;
+}
+
+.shark-gills-style img {
+	width: 100%;
+	height: 100%;
+}
+
+.nav-container {
+	width: 80%;
+	height: 100%;
+	/* margin-left: auto; */
+	z-index: 4;
+	background-color: var(--white);
+	position: relative;
+	clip-path: polygon(100% 0, 100% 100%, 0 100%, 5% 0);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav-links {
+	width: 40%;
+	height: 100%;
+	display: flex;
+	list-style: none;
+	/* background-color: red; */
+	color: var(--grey);
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+}
+
+.nav-links li {
+	width: 20%;
+	display: flex;
+	align-items: center;
+	padding: 0px 10%;
+	justify-content: center;
+	background-color: var(--white);
+	border-left: 2px solid var(--grey);
+	font-size: 0.7rem;
+	font-weight: bold;
+	clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+	animation: sizingDown 1s ease-in-out;
+}
+
+.nav-links li a {
+	text-decoration: none;
+	color: var(--grey);
+}
+
+.nav-links li:hover {
+	width: 40%;
+	background-color: var(--black);
+	clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+	animation: sizingUp 1s ease-in-out;
+}
+
+@keyframes sizingUp {
+	0% {
+		width: 0%;
+		opacity: 70%;
+	}
+	25% {
+		width: 25%;
+		opacity: 100%;
+	}
+	50% {
+		width: 50%;
+		opacity: 100%;
+	}
+	75% {
+		width: 75%;
+		opacity: 100%;
+	}
+	100% {
+		width: 100%;
+		opacity: 100%;
+	}
+}
+
+@keyframes sizingDown {
+	0% {
+		width: 100%;
+		background-color: var(--black);
+	}
+	25% {
+		width: 75%;
+		background-color: var(--grey);
+	}
+	50% {
+		width: 50%;
+		background-color: var(--white);
+	}
+	75% {
+		width: 25%;
+	}
+	100% {
+		width: 0%;
+	}
+}
+
+#top-frame-style {
+	width: 10%;
+	position: absolute;
+	top: -28%;
+	right: 0;
+	z-index: 5;
+}
+
+.toggle-input {
+	display: none;
+}
+
+.toggle-label {
+	display: none;
+	padding: 0.5rem;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+.hero-container {
+	width: 100vw;
+	height: 60vh;
+	background-image: url(assets/motoGP.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 40%;
+	backdrop-filter: var(--black);
+	position: relative;
+	z-index: 1;
+}
+
+.dark-filter {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-image: linear-gradient(
+		to right,
+		rgba(0, 0, 0, 1),
+		rgba(0, 0, 0, 0)
+	);
+	height: 100%;
+	/* background-color: red; */
+	z-index: 5;
+}
+
+
+.hero-text-container{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    position: absolute;
+    z-index: 5;
+    padding-left: 5%;
+}
+
+.hero-text-container h1{
+    font-family: "Bebas Neue", system-ui;
+    font-weight: 500;
+    font-size: clamp(2rem, 3vw, 5rem);
+    text-align: center;
+    color: white;
+    letter-spacing: 5%;
+}
+
+.horizontal_line{
+	width: 100%;
+	height: 2vh;
+	background-image: url(assets/horizontal_line_style.jpg);
+	background-repeat: no-repeat;
+	background-position: 0% 50%;
+	background-size: 50%;
+}
+
+.bike_category_container{
+	width: 100%;
+	height: auto;
+	background-color: red;
+}
+
+.bike_category_container .left_container{
+	width: 50%;
+	height: 50vh;
+	background-color: black;
+	
+}
+
+
+@media (max-width: 570px) {
+    .hero-container {
+        background-position: 60% 40%;
+    }
+
+    .hero-text-container{
+        width: 100%;
+    }
+}
+
+@media (max-width: 1054px) {
+	.nav-container {
+		clip-path: none;
+		/* display: none; */
+		width: 100%;
+		position: relative;
+		padding-right: 1rem;
+	}
+
+	@keyframes slideToLeft {
+		from {
+			transform: translateX(100%);
+		}
+		to {
+			transform: translateX(0);
+		}
+	}
+
+	@keyframes slideToRight {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(100%);
+		}
+	}
+
+	.nav-links {
+		display: flex;
+		visibility: hidden;
+		/* display: none; */
+		opacity: 0;
+		flex-direction: column;
+		position: absolute;
+		top: 100%;
+		gap: 1.5rem;
+		left: 0;
+		width: 100%;
+		padding: 1rem;
+		height: 100vh;
+		background-color: var(--white);
+		z-index: 10;
+		transform: translateX(100%);
+		transition:
+			transform 1s ease-in-out,
+			opacity 1s ease-in-out,
+			visibility 1s ease-in-out;
+	}
+
+	.nav-links li {
+		width: 100%;
+		clip-path: none;
+		border-left: none;
+		font-size: 0.7rem;
+
+		animation: none;
+	}
+
+	.nav-links li:hover {
+		clip-path: none;
+		width: 100%;
+		background-color: transparent;
+		cursor: pointer;
+		border-bottom: 1px solid var(--grey);
+		animation: none;
+	}
+
+	.toggle-label {
+		display: flex;
+		margin-left: auto;
+		cursor: pointer;
+	}
+
+	.toggle-input:checked + .toggle-label + .nav-links {
+		visibility: visible;
+		opacity: 1;
+		animation: slideToLeft 1s ease-in-out;
+		transform: translateX(0);
+	}
+}
