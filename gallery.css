@@ -14,7 +14,7 @@ html,body{
     width: 100vw;
     overflow-x: hidden;
 }
-
+/* navbar start */
 #navbar-container {
 	width: 100%;
 	height: 6vh;
@@ -99,7 +99,7 @@ html,body{
 	font-size: 0.7rem;
 	font-weight: bold;
 	clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-	animation: sizingDown 1s ease-in-out;
+	animation: sizingDown 0.2s ease-in-out;
 }
 
 .nav-links li a {
@@ -175,88 +175,6 @@ html,body{
 	padding: 0.5rem;
 	border-radius: 6px;
 	cursor: pointer;
-}
-
-.hero-container {
-	width: 100vw;
-	height: 60vh;
-	background-image: url(assets/motoGP.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: 0 40%;
-	backdrop-filter: var(--black);
-	position: relative;
-	z-index: 1;
-}
-
-.dark-filter {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	background-image: linear-gradient(
-		to right,
-		rgba(0, 0, 0, 1),
-		rgba(0, 0, 0, 0)
-	);
-	height: 100%;
-	/* background-color: red; */
-	z-index: 5;
-}
-
-
-.hero-text-container{
-    width: 40%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: red; */
-    position: absolute;
-    z-index: 5;
-    padding-left: 5%;
-}
-
-.hero-text-container h1{
-    font-family: "Bebas Neue", system-ui;
-    font-weight: 500;
-    font-size: clamp(2rem, 3vw, 5rem);
-    text-align: center;
-    color: white;
-    letter-spacing: 5%;
-}
-
-.horizontal_line{
-	width: 100%;
-	height: 2vh;
-	background-image: url(assets/horizontal_line_style.jpg);
-	background-repeat: no-repeat;
-	background-position: 0% 50%;
-	background-size: 50%;
-}
-
-.bike_category_container{
-	width: 100%;
-	height: auto;
-	background-color: red;
-}
-
-.bike_category_container .left_container{
-	width: 50%;
-	height: 50vh;
-	background-color: black;
-	
-}
-
-
-@media (max-width: 570px) {
-    .hero-container {
-        background-position: 60% 40%;
-    }
-
-    .hero-text-container{
-        width: 100%;
-    }
 }
 
 @media (max-width: 1054px) {
@@ -339,3 +257,174 @@ html,body{
 		transform: translateX(0);
 	}
 }
+
+/* navbar end */
+
+.hero-container {
+	width: 100vw;
+	height: 60vh;
+	background-image: url(assets/motoGP.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 40%;
+	backdrop-filter: var(--black);
+	position: relative;
+	z-index: 1;
+}
+
+.dark-filter {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-image: linear-gradient(
+		to right,
+		rgba(0, 0, 0, 1),
+		rgba(0, 0, 0, 0)
+	);
+	height: 100%;
+	/* background-color: red; */
+	z-index: 5;
+}
+
+
+.hero-text-container{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    position: absolute;
+    z-index: 5;
+    padding-left: 5%;
+}
+
+.hero-text-container h1{
+    font-family: "Bebas Neue", system-ui;
+    font-weight: 500;
+    font-size: clamp(2rem, 3vw, 5rem);
+    text-align: center;
+    color: white;
+    letter-spacing: 5%;
+}
+
+.horizontal_line{
+	width: 100%;
+	height: 2vh;
+	background-image: url(assets/horizontal_line_style.jpg);
+	background-repeat: no-repeat;
+	background-position: 0% 50%;
+	background-size: 50%;
+}
+
+.bike_category_container{
+	width: 100%;
+	height: auto;
+	/* background-color: red; */
+	display: flex;
+}
+
+.bike_category_container .left_container{
+	width: 40%;
+	height: auto;
+	background-color: var(--black);
+	background-image: url(assets/SportBike_category_img.jpg);
+	background-position: -10% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+#bike_category2{
+	background-image: url(assets/NakedBike_category_img.jpg);
+}
+
+#bike_category3{
+	background-image: url(assets/AdventureBike_category_img.jpg);
+}
+
+.gallery_right_container{
+	width: 60%;
+	height: auto;
+	/* display: flex; */
+}
+
+
+.gallery_cards_container{
+	width: 100%;
+	height: auto;
+	padding: 1%;
+	background: linear-gradient(to right,rgb(0, 0, 0) 20% ,white 100%);
+	display: flex;
+	justify-content: space-evenly;
+	/* flex: wrap; */
+}
+
+.gallery_card{
+	width: 15rem;
+	height: 20rem;
+	min-height: 10rem;
+	background-color: var(--white);
+	border: 2px solid var(--black);
+	border-top-left-radius: 0.7rem;
+	border-top-right-radius: 0.7rem;
+}
+
+.gallery_card img{
+	width: 100%;
+	height: 50%;
+	max-height: 50%;
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+	background-size: cover;
+	object-fit: cover;
+	object-position: 0% center;
+	/* background-color: blue; */
+}
+
+.card-text-container{
+	height: 50%;
+	width: 100%;
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+
+.card-text-container h1{
+	height: 100%;
+	font-size: 1.5rem;
+	font-family: "Bebas Neue", system-ui;
+	/* background-color: red; */
+	/* letter-spacing: 0.1rem; */
+}
+
+.card-text-container a{
+	height: 30%;
+	text-decoration: none;
+	border: 2px solid var(--black);
+	color: var(--black);
+	font-family: sans-serif;
+	font-weight: 400;	
+	/* letter-spacing: 0.1rem; */
+	background-color: var(--white);
+	display: flex;
+	align-items: center;
+	font-weight: bold;
+	font-size: 1.2rem;
+	justify-content: center;
+}
+
+
+@media (max-width: 570px) {
+    .hero-container {
+        background-position: 60% 40%;
+    }
+
+    .hero-text-container{
+        width: 100%;
+    }
+}
+
+
